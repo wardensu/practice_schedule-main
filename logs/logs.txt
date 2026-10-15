@@ -1,0 +1,61 @@
+--------- beginning of main
+10-15 12:45:04.360 D/MainActivity(16590): onCreate: экран создан, подключена разметка activity_main
+10-15 12:45:04.447 D/MainActivity(16590): onStart: экран стал видимым
+10-15 12:45:04.450 D/MainActivity(16590): onResume: экран на переднем плане, доступен для ввода
+10-15 12:45:13.231 W/MainActivity(16590): Поле «Учебная группа» пустое — переход на ScheduleActivity отменён
+10-15 12:45:44.546 I/MainActivity(16590): Нажата кнопка «Показать пары»: группа=CSE-24-3, день=Среда (индекс 2)
+10-15 12:45:44.593 D/MainActivity(16590): startActivity выполнен: переход MainActivity → ScheduleActivity
+10-15 12:45:44.610 D/MainActivity(16590): onPause: экран потерял фокус
+10-15 12:45:44.654 D/ScheduleActivity(16590): onCreate: экран создан, подключена разметка activity_schedule
+10-15 12:45:44.655 I/ScheduleActivity(16590): Получены данные из Intent: группа=CSE-24-3, индекс дня=2
+10-15 12:45:44.671 D/ScheduleActivity(16590): Список построен: добавлено карточек — 4
+10-15 12:45:44.673 D/ScheduleActivity(16590): onStart: экран стал видимым
+10-15 12:45:44.675 D/ScheduleActivity(16590): onResume: экран на переднем плане
+10-15 12:45:44.919 D/MainActivity(16590): onStop: экран больше не виден
+10-15 12:45:50.350 I/ScheduleActivity(16590): Выбрана пара «Операционные системы» (09:30–10:50), открывается LessonActivity
+10-15 12:45:50.369 D/ScheduleActivity(16590): onPause: экран потерял фокус
+10-15 12:45:50.396 D/LessonActivity(16590): onCreate: экран создан, подключена разметка activity_lesson
+10-15 12:45:50.396 I/LessonActivity(16590): Получены данные: Операционные системы, Данияров Р. М., ГУК, ауд. 310, 09:30–10:50, группа CSE-24-3
+10-15 12:45:50.398 D/LessonActivity(16590): onStart: экран стал видимым
+10-15 12:45:50.399 D/LessonActivity(16590): onResume: экран на переднем плане
+10-15 12:45:50.543 D/ScheduleActivity(16590): onStop: экран больше не виден
+10-15 12:45:56.724 I/LessonActivity(16590): Нажата кнопка «Назад»: вызывается finish(), возврат на ScheduleActivity
+10-15 12:45:56.739 D/LessonActivity(16590): onPause: экран потерял фокус
+10-15 12:45:56.760 D/ScheduleActivity(16590): onStart: экран стал видимым
+10-15 12:45:56.761 D/ScheduleActivity(16590): onResume: экран на переднем плане
+10-15 12:45:56.864 D/LessonActivity(16590): onStop: экран больше не виден
+10-15 12:45:56.866 D/LessonActivity(16590): onDestroy: экран уничтожен
+10-15 12:46:02.606 I/ScheduleActivity(16590): Нажата кнопка «Назад»: вызывается finish(), возврат на MainActivity
+10-15 12:46:02.628 D/ScheduleActivity(16590): onPause: экран потерял фокус
+10-15 12:46:02.646 D/MainActivity(16590): onStart: экран стал видимым
+10-15 12:46:02.646 D/MainActivity(16590): onResume: экран на переднем плане, доступен для ввода
+10-15 12:46:02.827 D/ScheduleActivity(16590): onStop: экран больше не виден
+10-15 12:46:02.828 D/ScheduleActivity(16590): onDestroy: экран уничтожен
+10-15 12:46:20.222 I/MainActivity(16590): Нажата кнопка «Показать пары»: группа=CSE-24-3, день=Суббота (индекс 5)
+10-15 12:46:20.233 D/MainActivity(16590): startActivity выполнен: переход MainActivity → ScheduleActivity
+10-15 12:46:20.240 D/MainActivity(16590): onPause: экран потерял фокус
+10-15 12:46:20.265 D/ScheduleActivity(16590): onCreate: экран создан, подключена разметка activity_schedule
+10-15 12:46:20.265 I/ScheduleActivity(16590): Получены данные из Intent: группа=CSE-24-3, индекс дня=5
+10-15 12:46:20.265 W/ScheduleActivity(16590): Для дня с индексом 5 занятий нет — показан выходной
+10-15 12:46:20.266 D/ScheduleActivity(16590): onStart: экран стал видимым
+10-15 12:46:20.268 D/ScheduleActivity(16590): onResume: экран на переднем плане
+10-15 12:46:20.446 D/MainActivity(16590): onStop: экран больше не виден
+10-15 12:46:28.778 I/ScheduleActivity(16590): Нажата кнопка «Назад»: вызывается finish(), возврат на MainActivity
+10-15 12:46:28.816 D/ScheduleActivity(16590): onPause: экран потерял фокус
+10-15 12:46:28.850 D/MainActivity(16590): onStart: экран стал видимым
+10-15 12:46:28.851 D/MainActivity(16590): onResume: экран на переднем плане, доступен для ввода
+10-15 12:46:28.976 D/ScheduleActivity(16590): onStop: экран больше не виден
+10-15 12:46:28.977 D/ScheduleActivity(16590): onDestroy: экран уничтожен
+10-15 12:46:34.854 I/MainActivity(16590): Нажата кнопка «О приложении»: переход MainActivity → AboutActivity
+10-15 12:46:34.878 D/MainActivity(16590): onPause: экран потерял фокус
+10-15 12:46:34.922 D/AboutActivity(16590): onCreate: экран создан, подключена разметка activity_about
+10-15 12:46:34.925 D/AboutActivity(16590): onStart: экран стал видимым
+10-15 12:46:34.926 D/AboutActivity(16590): onResume: экран на переднем плане
+10-15 12:46:35.080 D/MainActivity(16590): onStop: экран больше не виден
+10-15 12:46:40.747 I/AboutActivity(16590): Системная кнопка «Назад»: экран закрывается
+10-15 12:46:40.754 D/AboutActivity(16590): onPause: экран потерял фокус
+10-15 12:46:40.763 D/MainActivity(16590): onStart: экран стал видимым
+10-15 12:46:40.764 D/MainActivity(16590): onResume: экран на переднем плане, доступен для ввода
+10-15 12:46:40.866 D/AboutActivity(16590): onStop: экран больше не виден
+10-15 12:46:40.871 D/AboutActivity(16590): onDestroy: экран уничтожен
+10-15 12:46:45.561 I/MainActivity(16590): Нажата кнопка «Очистить»: поля возвращены в исходное состояние

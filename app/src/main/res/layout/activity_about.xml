@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Экран 4 — сведения о приложении.
+    Корневой контейнер: RelativeLayout. Значок и заголовок привязаны к
+    верхнему краю, кнопка «Назад» — к нижнему, описание занимает место
+    между ними (layout_below + layout_above).
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aboutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/screen_padding">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/about_logo_description" />
+
+    <TextView
+        android:id="@+id/tvAboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivLogo"
+        android:layout_alignTop="@id/ivLogo"
+        android:layout_marginStart="@dimen/space_medium"
+        android:text="@string/app_name"
+        style="@style/ScreenTitle" />
+
+    <TextView
+        android:id="@+id/tvAboutVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAboutTitle"
+        android:layout_alignStart="@id/tvAboutTitle"
+        android:layout_marginTop="@dimen/space_small"
+        android:text="@string/about_version"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/text_secondary" />
+
+    <Button
+        android:id="@+id/btnBackAbout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_back" />
+
+    <!-- Подпись автора: над кнопкой, по центру -->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnBackAbout"
+        android:layout_marginBottom="@dimen/space_medium"
+        android:gravity="center"
+        android:text="@string/about_author"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Описание и версии SDK: область между шапкой и подписью.
+         Фон карточки задан внутреннему контейнеру, поэтому белый
+         прямоугольник занимает ровно высоту текста, а ScrollView
+         включается только при нехватке места на экране. -->
+    <ScrollView
+        android:id="@+id/svAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_above="@id/tvAuthor"
+        android:layout_marginTop="@dimen/space_large">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="@dimen/screen_padding">
+
+            <TextView
+                android:id="@+id/tvAboutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_text"
+                android:textSize="@dimen/text_body"
+                android:textColor="@color/text_primary"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:id="@+id/tvAboutSdk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:text="@string/about_sdk"
+                android:textSize="@dimen/text_caption"
+                android:textStyle="bold"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

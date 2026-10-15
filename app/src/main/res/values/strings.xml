@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Расписание занятий</string>
+    <string name="value_unknown">—</string>
+
+    <!-- Экран 1: MainActivity -->
+    <string name="main_title">Расписание занятий</string>
+    <string name="main_subtitle">Институт автоматики и информационных технологий</string>
+    <string name="label_group">Учебная группа</string>
+    <string name="hint_group">Например: CSE-24-3</string>
+    <string name="label_day">День недели</string>
+    <string name="btn_show">Показать пары</string>
+    <string name="btn_clear">Очистить</string>
+    <string name="btn_about">О приложении</string>
+    <string name="error_empty_group">Введите название группы</string>
+    <string name="toast_cleared">Поля очищены</string>
+    <string name="main_summary">В расписании недели %1$d занятий по %2$d дисциплинам</string>
+
+    <!-- Экран 2: ScheduleActivity -->
+    <string name="schedule_title">Расписание на %1$s</string>
+    <string name="schedule_group">Группа %1$s</string>
+    <string name="schedule_count">Занятий в этот день: %1$d</string>
+    <string name="schedule_day_off">В этот день занятий нет — выходной</string>
+    <string name="schedule_hint">Нажмите на пару, чтобы открыть сведения о дисциплине</string>
+    <string name="item_type_teacher">%1$s · %2$s</string>
+    <string name="btn_back">Назад</string>
+
+    <!-- Виды занятий -->
+    <string name="lesson_type_lecture">Лекция</string>
+    <string name="lesson_type_practice">Практическое занятие</string>
+    <string name="lesson_type_lab">Лабораторная работа</string>
+
+    <!-- Экран 3: LessonActivity -->
+    <string name="lesson_teacher_label">Преподаватель</string>
+    <string name="lesson_room_label">Аудитория</string>
+    <string name="lesson_time_label">Время</string>
+    <string name="lesson_group_label">Группа</string>
+    <string name="lesson_icon_description">Значок вида занятия</string>
+    <string name="lesson_not_found">Сведения о паре не переданы</string>
+
+    <!-- Экран 4: AboutActivity -->
+    <string name="about_title">О приложении</string>
+    <string name="about_logo_description">Значок приложения</string>
+    <string name="about_version">Версия 1.0 (versionCode 1)</string>
+    <string name="about_text">Учебное приложение к практической работе по дисциплине CSE6362 «Разработка мобильных приложений». Показывает расписание занятий учебной группы: пользователь вводит название группы, выбирает день недели, получает список пар и открывает карточку с подробными сведениями о дисциплине и преподавателе.\n\nПриложение построено на классической системе View: интерфейс описан XML-разметкой, переходы между экранами выполняются явными Intent, данные передаются через putExtra(). Все тексты, цвета и размеры вынесены в ресурсы res/values.</string>
+    <string name="about_sdk">minSdk 26 (Android 8.0) · targetSdk 37 · compileSdk 37</string>
+    <string name="about_author">Выполнил: Михайлов Д. А.</string>
+
+    <!-- Дни недели. Позиция элемента совпадает с индексом дня в Schedule.kt -->
+    <string-array name="days_of_week">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+    </string-array>
+
+    <!-- Те же дни в винительном падеже — для заголовка «Расписание на …» -->
+    <string-array name="days_of_week_accusative">
+        <item>понедельник</item>
+        <item>вторник</item>
+        <item>среду</item>
+        <item>четверг</item>
+        <item>пятницу</item>
+        <item>субботу</item>
+    </string-array>
+</resources>

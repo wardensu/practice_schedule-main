@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Экран 1 — выбор группы и дня недели.
+    Корневой контейнер: LinearLayout с вертикальной ориентацией.
+    Вложенные контейнеры: шапка (LinearLayout), прокручиваемая форма
+    (ScrollView + LinearLayout) и строка из двух кнопок (LinearLayout
+    с горизонтальной ориентацией и layout_weight).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Шапка экрана -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_header"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            android:textColor="@color/on_primary" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_small"
+            android:text="@string/main_subtitle"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/on_primary"
+            android:alpha="0.85" />
+    </LinearLayout>
+
+    <!-- Форма занимает всё оставшееся место: высота 0dp + layout_weight="1" -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_group"
+                style="@style/FieldLabel" />
+
+            <EditText
+                android:id="@+id/etGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:hint="@string/hint_group"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:maxLines="1"
+                android:textSize="@dimen/text_body"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:text="@string/label_day"
+                style="@style/FieldLabel" />
+
+            <Spinner
+                android:id="@+id/spDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:background="@drawable/bg_card"
+                android:padding="@dimen/space_small"
+                android:spinnerMode="dropdown" />
+
+            <!-- Вложенный горизонтальный контейнер: две кнопки делят ширину поровну -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnShow"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:text="@string/btn_show" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:text="@string/btn_clear" />
+            </LinearLayout>
+
+            <!-- Второстепенное действие оформлено кнопкой с контуром,
+                 чтобы не спорить с основными кнопками экрана -->
+            <Button
+                android:id="@+id/btnAbout"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/space_medium"
+                android:text="@string/btn_about" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Сводка по неделе прижата к низу экрана; текст задаётся в MainActivity -->
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_padding"
+        android:background="@drawable/bg_card"
+        android:padding="@dimen/card_padding"
+        android:gravity="center"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/text_secondary" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Экран 2 — список пар выбранного дня.
+    Корневой контейнер: LinearLayout (вертикальный).
+    Карточки пар добавляются в llLessons из кода: разметка одной карточки
+    описана в отдельном файле item_lesson.xml.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scheduleRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Шапка: день недели, группа и количество пар -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_header"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:id="@+id/tvDayTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            android:textColor="@color/on_primary" />
+
+        <TextView
+            android:id="@+id/tvGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_small"
+            android:textSize="@dimen/text_subtitle"
+            android:textColor="@color/on_primary" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/text_caption"
+            android:textColor="@color/on_primary"
+            android:alpha="0.85" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_medium"
+        android:text="@string/schedule_hint"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Прокручиваемый список занимает всё свободное место -->
+    <ScrollView
+        android:id="@+id/svLessons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/llLessons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_medium" />
+    </ScrollView>
+
+    <!-- Сообщение о выходном дне: показывается вместо списка, если пар
+         в этот день нет. Высота 0dp + layout_weight="1" заставляют текст
+         занять всё свободное место, а gravity="center" ставит его по центру. -->
+    <TextView
+        android:id="@+id/tvDayOff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/space_large"
+        android:gravity="center"
+        android:text="@string/schedule_day_off"
+        android:textSize="@dimen/text_subtitle"
+        android:textColor="@color/text_secondary"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/screen_padding"
+        android:text="@string/btn_back" />
+</LinearLayout>

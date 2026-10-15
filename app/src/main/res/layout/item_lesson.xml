@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Карточка одной пары в списке.
+    Контейнер: RelativeLayout — элементы позиционируются относительно друг
+    друга и краёв родителя, вложенных контейнеров нет.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_medium"
+    android:background="@drawable/bg_card"
+    android:padding="@dimen/card_padding"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Значок вида занятия в левом верхнем углу -->
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="@dimen/icon_size_small"
+        android:layout_height="@dimen/icon_size_small"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_icon_circle"
+        android:padding="@dimen/space_small"
+        android:contentDescription="@string/lesson_icon_description" />
+
+    <!-- Время пары прижато к правому краю карточки -->
+    <TextView
+        android:id="@+id/tvItemTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/ivType"
+        android:textSize="@dimen/text_caption"
+        android:textStyle="bold"
+        android:textColor="@color/accent" />
+
+    <!-- Название дисциплины: справа от значка и слева от времени -->
+    <TextView
+        android:id="@+id/tvItemSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivType"
+        android:layout_toStartOf="@id/tvItemTime"
+        android:layout_alignTop="@id/ivType"
+        android:layout_marginStart="@dimen/space_medium"
+        android:layout_marginEnd="@dimen/space_small"
+        android:textSize="@dimen/text_body"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary" />
+
+    <!-- Вид занятия и преподаватель — под названием, по его левой границе -->
+    <TextView
+        android:id="@+id/tvItemTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvItemSubject"
+        android:layout_alignStart="@id/tvItemSubject"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Аудитория — под преподавателем -->
+    <TextView
+        android:id="@+id/tvItemRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvItemTeacher"
+        android:layout_alignStart="@id/tvItemSubject"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/text_caption"
+        android:textColor="@color/primary" />
+</RelativeLayout>

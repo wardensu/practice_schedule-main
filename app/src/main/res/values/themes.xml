@@ -1,0 +1,24 @@
+<resources>
+    <style name="Theme.PracticeSchedule" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+
+    <!-- Стиль заголовка экрана: вынесен, чтобы не повторять атрибуты в разметках -->
+    <style name="ScreenTitle">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <!-- Стиль подписи поля -->
+    <style name="FieldLabel">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>
