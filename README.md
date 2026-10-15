@@ -107,8 +107,10 @@ adb logcat -d -v time -s MainActivity ScheduleActivity LessonActivity AboutActiv
 
 ## APK
 
-Отладочная сборка приложения выложена в разделе **Releases** этого репозитория
-(файл `Practice_Schedule_v1.0_debug.apk`, Android 8.0+).
+Отладочная сборка приложения выложена в разделе
+**[Releases](https://github.com/wardensu/practice_schedule-main/releases/tag/v1.0)**:
+[practice_schedule_v1.0_debug.apk](https://github.com/wardensu/practice_schedule-main/releases/download/v1.0/practice_schedule_v1.0_debug.apk)
+— Android 8.0 и выше.
 
 ## Структура проекта
 
